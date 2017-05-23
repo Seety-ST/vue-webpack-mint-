@@ -38,16 +38,19 @@
 		</ul>
 		<!-- 带参数的路由跳转end -->
 		<button type="" @click="toast_button" style="border:1px solid #ccc">toast提示</button>
-		<!-- 加载更多start -->
-		<ul v-infinite-scroll="loadMore" infinite-scroll-disabled="loading" infinite-scroll-distance="10" infinite-scroll-immediate-check="false">
-		  <li v-for="item in lists">{{ item.name }}</li>
-		</ul>
-		<!-- 加载更多end -->
+		<!-- lazyload start-->
 		<ul id="container">
 			<li v-for="item in lists">
 				<img v-lazy.container="item.image">
 			</li>
 		</ul>
+		<!-- lazyload end-->
+		<!-- 加载更多start -->
+		<ul v-infinite-scroll="loadMore" infinite-scroll-disabled="loading" infinite-scroll-distance="10" infinite-scroll-immediate-check="false">
+		  <li v-for="item in lists">{{ item.name }}</li>
+		</ul>
+		<!-- 加载更多end -->
+		
 		<!-- 公共底部start -->
 		<g-footer></g-footer>
 		<!-- 公共底部end -->
