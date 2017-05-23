@@ -1,0 +1,10 @@
+@import '../../scss/compass';
+body{
+
+    .head{
+        height: rem(35);
+        line-height: rem(35);
+        text-align: center;
+        border-bottom:1px solid #000;
+    }
+}

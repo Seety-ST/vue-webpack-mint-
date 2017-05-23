@@ -1,0 +1,14 @@
+@import '../../scss/compass';
+
+body{
+
+    font-size: rem(18);
+    .swipe-list{
+    	li{
+    		height:rem(100);
+    	}
+    }
+    .mint-swipe{
+    	height: rem(100);
+    }
+}

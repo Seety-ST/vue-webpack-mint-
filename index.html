@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.3, user-scalable=0"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="wap-font-scale" content="no">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>ebox</title>
+	
+  </head>
+  <body>
+	<div id="app"></div>
+	<!-- built files will be auto injected -->
+  </body>
+  <script>
+      (function(doc, win) {
+          var docEl = doc.documentElement,
+              resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+              recalc = function() {
+                 var clientWidth = docEl.clientWidth;
+                 if (!clientWidth) return;
+
+                 if(clientWidth<=768)
+                 {
+                   docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+                 }
+                 else
+                 {
+                   docEl.style.fontSize = 100*(768/375) + 'px';
+                 }
+
+
+              };
+              recalc();
+          if (!doc.addEventListener) return;
+          win.addEventListener(resizeEvt, recalc, false);
+          doc.addEventListener('DOMContentLoaded', recalc, false);
+      })(document, window);
+  </script>
+</html>

@@ -1,0 +1,20 @@
+@import '../../scss/compass';
+body{
+
+    .footer{
+        width:100%;
+        position:fixed;
+        left:0;
+        bottom:0;
+        z-index: 1;
+       ul{
+        display: -webkit-box;
+        display:box;
+        li{
+            -webkit-box-flex:1;
+            box-flex:1;
+            text-align: center;
+        }
+       }
+    }
+}
